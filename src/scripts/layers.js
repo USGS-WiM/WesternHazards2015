@@ -37,6 +37,40 @@ require([
                         "includeLegend" : true
                     }
                 },
+                "Wildfires" : {
+                    "url": "http://igems.doi.gov/ArcGIS/rest/services/igems_haz/MapServer",
+                    'visibleLayers': [10],
+                    "options": {
+                        "id": "wildfires",
+                        "opacity": 0.75,
+                        "visible": true
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "zoomScale": 144448,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true
+                    }
+                },
+                "Wildfire perimeters" : {
+                    "url": "http://igems.doi.gov/ArcGIS/rest/services/igems_haz/MapServer",
+                    'visibleLayers': [11],
+                    "options": {
+                        "id": "wildfirePerimeters",
+                        "opacity": 0.75,
+                        "visible": true
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "zoomScale": 144448,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true
+                    }
+                },
                 "Severe" : {
                     "url": "http://igems.doi.gov/ArcGIS/rest/services/igems_haz/MapServer",
                     "visibleLayers": [12],
