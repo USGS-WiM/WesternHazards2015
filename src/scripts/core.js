@@ -23,7 +23,9 @@ require([
     'esri/dijit/Geocoder',
     'esri/dijit/PopupTemplate',
     'esri/graphic',
+    'esri/geometry/Extent',
     'esri/geometry/Multipoint',
+    'esri/SpatialReference',
     'esri/symbols/PictureMarkerSymbol',
     'esri/geometry/webMercatorUtils',
     'dojo/dnd/Moveable',
@@ -42,7 +44,9 @@ require([
     Geocoder,
     PopupTemplate,
     Graphic,
+    Extent,
     Multipoint,
+    SpatialReference,
     PictureMarkerSymbol,
     webMercatorUtils,
     Moveable,
@@ -57,8 +61,7 @@ require([
 
     map = Map('mapDiv', {
         basemap: 'topo',
-        center: [-95.6, 38.6],
-        zoom: 5
+        extent: new Extent(-14638882.654811008, 2641706.3772205533, -6821514.898031538, 6403631.161302788, new SpatialReference({ wkid:3857 }))
     });
     //button for returning to initial extent
     var home = new HomeButton({
