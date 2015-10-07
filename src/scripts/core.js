@@ -379,6 +379,7 @@ require([
         'esri/geometry/Extent',
         'esri/layers/ArcGISDynamicMapServiceLayer',
         'esri/layers/FeatureLayer',
+        "esri/layers/KMLLayer",
         'esri/layers/WMSLayer',
         'esri/layers/WMSLayerInfo',
         'dijit/form/CheckBox',
@@ -398,6 +399,7 @@ require([
         Extent,
         ArcGISDynamicMapServiceLayer,
         FeatureLayer,
+        KMLLayer,
         WMSLayer,
         WMSLayerInfo,
         CheckBox,
@@ -469,9 +471,49 @@ require([
                     addLayer(group.groupHeading, group.showGroupHeading, layer, layerName, exclusiveGroupName, layerDetails.options, layerDetails.wimOptions);
                     //addMapServerLegend(layerName, layerDetails);
                 }
+
+                else if (layerDetails.wimOptions.layerType === 'kml') {
+                    var layer = new KMLLayer(layerDetails.url, layerDetails.options);
+                    //check if include in legend is true
+                    if (layerDetails.wimOptions && layerDetails.wimOptions.includeLegend == true){
+                        legendLayers.unshift({layer:layer, title: layerName});
+                    }
+                    //map.addLayer(layer);
+                    addLayer(group.groupHeading, group.showGroupHeading, layer, layerName, exclusiveGroupName, layerDetails.options, layerDetails.wimOptions);
+                    //addMapServerLegend(layerName, layerDetails);
+                }
             });
         });
 
+        require(["esri/map","esri/layers/KMLLayer","dojo/domReady!"],function (Map,KMLLayer){
+            
+            var prcp3kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Prcp_D3_7.kml",{id:"prcp3"});
+            var prcp8kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Prcp_D8_14.kml",{id:"prcp8"});
+            var temp3kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Temp_D3_7.kml",{id:"temp3"});
+            var temp8kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Temp_D8_14.kml",{id:"temp8"});
+            var soil3kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Soils_D3_7.kml",{id:"soil3"});
+            var soil8kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Soils_D8_14.kml",{id:"soil8"});
+            var temppkml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Tempprob_D8_14.kml",{id:"tempp"});
+
+            /*prcp3kml.setVisibility(false);
+            prcp8kml.setVisibility(false);
+            temp3kml.setVisibility(false);
+            temp8kml.setVisibility(false);
+            soil3kml.setVisibility(false);
+            soil8kml.setVisibility(false);
+            temppkml.setVisibility(false);*/
+            
+            /*map.addLayer(prcp3kml);
+            map.addLayer(prcp8kml);
+            map.addLayer(temp3kml);
+            map.addLayer(temp8kml);
+            map.addLayer(soil3kml);
+            map.addLayer(soil8kml);*/
+            /*map.addLayer(temppkml);*/
+
+        });
+
+        
         function addLayer(groupHeading, showGroupHeading, layer, layerName, exclusiveGroupName, options, wimOptions) {
 
             //add layer to map
