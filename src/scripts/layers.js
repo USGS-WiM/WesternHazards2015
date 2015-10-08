@@ -158,6 +158,61 @@ require([
             }
         },
         {
+            'groupHeading': 'NFHL Layers',
+            'showGroupHeading': true,
+            'includeInLayerList': true,
+            'layers': {
+                "Flood hazard availability" : {
+                    "url": "http://hazards.fema.gov/gis/nfhl/rest/services/public/NFHL/MapServer",
+                    "visibleLayers": [0],
+                    "options": {
+                        "id": "floodHazAvail",
+                        "opacity": 0.75,
+                        "visible": false
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true
+                    }
+                },
+                "Flood hazard boundaries" : {
+                    "url": "http://hazards.fema.gov/gis/nfhl/rest/services/public/NFHL/MapServer",
+                    "visibleLayers": [27],
+                    "options": {
+                        "id": "floodHazBound",
+                        "opacity": 0.75,
+                        "visible": false
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true
+                    }
+                },
+                "Flood hazard zones" : {
+                    "url": "http://hazards.fema.gov/gis/nfhl/rest/services/public/NFHL/MapServer",
+                    "visibleLayers": [28],
+                    "options": {
+                        "id": "floodHazardZones",
+                        "opacity": 0.75,
+                        "visible": false
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true
+                    }
+                }
+            }
+        },
+        {
             'groupHeading': 'CPC Layers',
             'showGroupHeading': true,
             'includeInLayerList': true,
@@ -348,6 +403,29 @@ require([
                         "id": "55month",
                         "opacity": 0.75,
                         "visible": true
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true
+                    }
+                }
+            }
+        },
+        {
+            'groupHeading': 'Situational awareness',
+            'showGroupHeading': true,
+            'includeInLayerList': true,
+            'layers': {
+                "NWIS surface water gages" : {
+                    "url": "http://fim.wimcloud.usgs.gov/arcgis/rest/services/FIMTest/nwisSites/MapServer",
+                    "visibleLayers": [0],
+                    "options": {
+                        "id": "nwisSW",
+                        "opacity": 0.75,
+                        "visible": false
                     },
                     "wimOptions": {
                         "type": "layer",
