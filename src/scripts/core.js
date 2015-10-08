@@ -28,6 +28,7 @@ require([
     'esri/SpatialReference',
     'esri/symbols/PictureMarkerSymbol',
     'esri/geometry/webMercatorUtils',
+    'esri/urlUtils',
     'dojo/dnd/Moveable',
     'dojo/query',
     'dojo/dom',
@@ -49,6 +50,7 @@ require([
     SpatialReference,
     PictureMarkerSymbol,
     webMercatorUtils,
+    urlUtils,
     Moveable,
     query,
     dom,
@@ -58,6 +60,11 @@ require([
 
     //bring this line back after experiment////////////////////////////
     //allLayers = mapLayers;
+
+    urlUtils.addProxyRule({
+      urlPrefix: "www.cpc.ncep.noaa.gov",
+      proxyUrl: "http://107.20.228.18/serviceProxy/proxy.ashx"
+    });
 
     map = Map('mapDiv', {
         basemap: 'topo',
