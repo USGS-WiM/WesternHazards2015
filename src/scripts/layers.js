@@ -194,25 +194,23 @@ require([
                         "includeLegend" : true
                     }
                 },
-                "3-7 Day Precipitation Outlook" : {
-                    "url": "http://gis.srh.noaa.gov/arcgis/rest/services/cpc_weather_hazards/MapServer",
-                    "visibleLayers": [2],
+                "6-10 Day Precipitation Outlook" : {
+                    "url": "http://www.cpc.ncep.noaa.gov/products/predictions/610day/610prcp_latest.kml",
                     "options": {
-                        "id": "precip3day",
+                        "id": "precip6day",
                         "opacity": 0.75,
                         "visible": false
                     },
                     "wimOptions": {
                         "type": "layer",
-                        "layerType": "agisDynamic",
+                        "layerType": "kml",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
                         "includeLegend" : true
                     }
                 },
                 "8-14 Day Precipitation Outlook" : {
-                    "url": "http://gis.srh.noaa.gov/arcgis/rest/services/cpc_weather_hazards/MapServer",
-                    "visibleLayers": [3],
+                    "url": "http://www.cpc.ncep.noaa.gov/products/predictions/814day/814prcp_latest.kml",
                     "options": {
                         "id": "precip8day",
                         "opacity": 0.75,
@@ -220,7 +218,7 @@ require([
                     },
                     "wimOptions": {
                         "type": "layer",
-                        "layerType": "agisDynamic",
+                        "layerType": "kml",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
                         "includeLegend" : true
@@ -249,6 +247,107 @@ require([
                         "id": "wildfire8day",
                         "opacity": 0.75,
                         "visible": false
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true
+                    }
+                }
+            }
+        },
+        {
+            'groupHeading': 'Long Lead Outlook Precipitation',
+            'showGroupHeading': true,
+            'includeInLayerList': true,
+            'layers': {
+                "Monthly" : {
+                    "url": "http://www.cpc.ncep.noaa.gov/products/predictions/30day/lead14_prcp.kml"+new Date().getTime(),
+                    "visibleLayers": [0],
+                    "options": {
+                        "id": "monthly",
+                        "opacity": 0.75,
+                        "visible": true
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true
+                    }
+                },
+                "1.5 month" : {
+                    "url": "http://www.cpc.ncep.noaa.gov/products/predictions/90day/lead2_prcp.kml",
+                    "visibleLayers": [1],
+                    "options": {
+                        "id": "15month",
+                        "opacity": 0.75,
+                        "visible": true
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true
+                    }
+                },
+                "2.5 month" : {
+                    "url": "http://www.cpc.ncep.noaa.gov/products/predictions/90day/lead3_prcp.kml",
+                    "options": {
+                        "id": "25month",
+                        "opacity": 0.75,
+                        "visible": true
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "kml",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true
+                    }
+                },
+                "3.5 month" : {
+                    "url": "http://www.cpc.ncep.noaa.gov/products/predictions/90day/lead4_prcp.kml",
+                    "options": {
+                        "id": "35month",
+                        "opacity": 0.75,
+                        "visible": true
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "kml",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true
+                    }
+                },
+                "4.5 month" : {
+                    "url": "http://www.cpc.ncep.noaa.gov/products/predictions/90day/lead5_prcp.kml",
+                    "visibleLayers": [4],
+                    "options": {
+                        "id": "45month",
+                        "opacity": 0.75,
+                        "visible": true
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "includeLegend" : true
+                    }
+                },
+                "5.5 month" : {
+                    "url": "http://www.cpc.ncep.noaa.gov/products/predictions/90day/lead6_prcp.kml",
+                    "visibleLayers": [5],
+                    "options": {
+                        "id": "55month",
+                        "opacity": 0.75,
+                        "visible": true
                     },
                     "wimOptions": {
                         "type": "layer",
