@@ -77,6 +77,31 @@ require([
             }
         },
         {
+            'groupHeading': 'US Drought Monitor weekly update',
+            'showGroupHeading': true,
+            'includeInLayerList': true,
+            'layers': {
+                "October 6, 2015" : {
+                    "url": "http://commons.wim.usgs.gov/arcgis/rest/services/WesternHazards2015/USDroughtMonitor/MapServer",
+                    'visibleLayers': [0],
+                    "options": {
+                        "id": "usDroughtMonitor",
+                        "opacity": 0.75,
+                        "visible": true
+                    },
+                    "wimOptions": {
+                        "type": "layer",
+                        "layerType": "agisDynamic",
+                        "includeInLayerList": true,
+                        "hasOpacitySlider": true,
+                        "moreinfo": "http://droughtmonitor.unl.edu/MapsAndData/GISData.aspx",
+                        "moreinfoText": "National drought mitigation center: The U.S. Drought Monitor is produced through a partnership between the National Drought Mitigation Center at the University of Nebraska-Lincoln, the United States Department of Agriculture, and the National Oceanic and Atmospheric Administration. http://droughtmonitor.unl.edu/MapsAndData/GISData.aspx",
+                        "includeLegend" : true
+                    }
+                }
+            }
+        },
+        {
             'groupHeading': 'NOAA Coastal Prediction Center Layers Selected Extended Range Outlook',
             'showGroupHeading': true,
             'includeInLayerList': true,
@@ -196,7 +221,6 @@ require([
             'layers': {
                 "Monthly" : {
                     "url": "http://www.cpc.ncep.noaa.gov/products/predictions/30day/lead14_prcp.kml",
-                    "visibleLayers": [0],
                     "options": {
                         "id": "monthly",
                         "opacity": 0.75,
@@ -204,7 +228,7 @@ require([
                     },
                     "wimOptions": {
                         "type": "layer",
-                        "layerType": "agisDynamic",
+                        "layerType": "kml",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
                         "moreinfo": "http://www.cpcpara.ncep.noaa.gov/",
@@ -214,7 +238,6 @@ require([
                 },
                 "1.5 month" : {
                     "url": "http://www.cpc.ncep.noaa.gov/products/predictions/90day/lead2_prcp.kml",
-                    "visibleLayers": [1],
                     "options": {
                         "id": "15month",
                         "opacity": 0.75,
@@ -222,7 +245,7 @@ require([
                     },
                     "wimOptions": {
                         "type": "layer",
-                        "layerType": "agisDynamic",
+                        "layerType": "kml",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
                         "moreinfo": "http://www.cpcpara.ncep.noaa.gov/",
@@ -266,7 +289,6 @@ require([
                 },
                 "4.5 month" : {
                     "url": "http://www.cpc.ncep.noaa.gov/products/predictions/90day/lead5_prcp.kml",
-                    "visibleLayers": [4],
                     "options": {
                         "id": "45month",
                         "opacity": 0.75,
@@ -274,7 +296,7 @@ require([
                     },
                     "wimOptions": {
                         "type": "layer",
-                        "layerType": "agisDynamic",
+                        "layerType": "kml",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
                         "moreinfo": "http://www.cpcpara.ncep.noaa.gov/",
@@ -284,7 +306,6 @@ require([
                 },
                 "5.5 month" : {
                     "url": "http://www.cpc.ncep.noaa.gov/products/predictions/90day/lead6_prcp.kml",
-                    "visibleLayers": [5],
                     "options": {
                         "id": "55month",
                         "opacity": 0.75,
@@ -292,7 +313,7 @@ require([
                     },
                     "wimOptions": {
                         "type": "layer",
-                        "layerType": "agisDynamic",
+                        "layerType": "kml",
                         "includeInLayerList": true,
                         "hasOpacitySlider": true,
                         "moreinfo": "http://www.cpcpara.ncep.noaa.gov/",
