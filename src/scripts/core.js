@@ -68,7 +68,7 @@ require([
 
     map = Map('mapDiv', {
         basemap: 'topo',
-        extent: new Extent(-14638882.654811008, 2641706.3772205533, -6821514.898031538, 6403631.161302788, new SpatialReference({ wkid:3857 }))
+        extent: new Extent(-18638882.654811008, 2641706.3772205533, -7221514.898031538, 6403631.161302788, new SpatialReference({ wkid:3857 }))
     });
     //button for returning to initial extent
     var home = new HomeButton({
@@ -500,29 +500,33 @@ require([
 
         require(["esri/map","esri/layers/KMLLayer","dojo/domReady!"],function (Map,KMLLayer){
             
-            var prcp3kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Prcp_D3_7.kml",{id:"prcp3"});
-            var prcp8kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Prcp_D8_14.kml",{id:"prcp8"});
-            var temp3kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Temp_D3_7.kml",{id:"temp3"});
-            var temp8kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Temp_D8_14.kml",{id:"temp8"});
-            var soil3kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Soils_D3_7.kml",{id:"soil3"});
-            var soil8kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Soils_D8_14.kml",{id:"soil8"});
-            var temppkml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Tempprob_D8_14.kml",{id:"tempp"});
-
+            /*var prcp3kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Prcp_D3_7.kml",{id:"prcp3test"});
+            var prcp8kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Prcp_D8_14.kml",{id:"prcp8test"});
+            var temp3kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Temp_D3_7.kml",{id:"temp3test"});
+            var temp8kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Temp_D8_14.kml",{id:"temp8test"});
+            var soil3kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Soils_D3_7.kml",{id:"soil3test"});
+            var soil8kml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Soils_D8_14.kml",{id:"soil8test"});
+            var temppkml=new KMLLayer("http://www.cpc.ncep.noaa.gov/products/predictions/threats/Tempprob_D8_14.kml",{id:"tempptest"});
+            
+            var droughtmonitorkml=new KMLLayer("http://droughtmonitor.unl.edu/data/kmz/usdm_20151006.kmz", {id: "droughttest"});
+            */
             /*prcp3kml.setVisibility(false);
             prcp8kml.setVisibility(false);
             temp3kml.setVisibility(false);
             temp8kml.setVisibility(false);
             soil3kml.setVisibility(false);
             soil8kml.setVisibility(false);
-            temppkml.setVisibility(false);*/
+            temppkml.setVisibility(false);
+            droughtmonitorkml.setVisibility(true);*/
             
             /*map.addLayer(prcp3kml);
             map.addLayer(prcp8kml);
             map.addLayer(temp3kml);
             map.addLayer(temp8kml);
             map.addLayer(soil3kml);
-            map.addLayer(soil8kml);*/
-            /*map.addLayer(temppkml);*/
+            map.addLayer(soil8kml);
+            map.addLayer(temppkml);
+            map.addLayer(droughtmonitorkml);*/
 
         });
 
