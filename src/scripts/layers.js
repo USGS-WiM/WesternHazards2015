@@ -102,7 +102,7 @@ require([
             }
         },
         {
-            'groupHeading': 'NOAA Coastal Prediction Center Layers Selected Extended Range Outlook',
+            'groupHeading': 'NOAA Climate Prediction Center Layers Selected Extended Range Outlook',
             'showGroupHeading': true,
             'includeInLayerList': true,
             'layers': {
@@ -343,7 +343,7 @@ require([
                         "includeLegend" : true
                     }
                 },
-                "NWIS surface water gages" : {
+                "USGS NWIS surface water gages" : {
                     "url": "http://fim.wimcloud.usgs.gov/arcgis/rest/services/FIMTest/nwisSites/MapServer",
                     "visibleLayers": [0],
                     "options": {
@@ -361,7 +361,7 @@ require([
                         "includeLegend" : true
                     }
                 },
-                "AHPS flood flow prediction points" : {
+                "NOAA AHPS flood flow prediction points" : {
                     "url": "http://gis.srh.noaa.gov/ArcGIS/rest/services/ahps_gauges/MapServer",
                     "visibleLayers": [1],
                     "options": {
