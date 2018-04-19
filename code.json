@@ -1,0 +1,45 @@
+[
+  {
+    "name": "WesternHazards2015",
+    "organization": "U.S. Geological Survey",
+    "description": "",
+    "version": "v0.0.0",
+    "status": ["Archival"],
+
+    "permissions": {
+      "usageType": "openSource",
+      "licenses": [
+        {
+          "name": "Public Domain",
+          "URL": "https://github.com/usgs/WesternHazards2015/blob/master/LICENSE.md"
+        }
+      ]
+    },
+
+    "homepageURL": "https://wim.usgs.gov",
+    "downloadURL": "https://github.com/USGS-WiM/WesternHazards2015/archive/master.zip",
+    "disclaimerURL": "https://github.com/USGS-WiM/WesternHazards2015/blob/master/DISCLAIMER.md",
+    "repositoryUrl": "https://github.com/USGS-WiM/WesternHazards2015",
+    "vcs": "git",
+
+    "laborHours": null,
+
+    "tags": [
+      "hazards",
+      "western"
+    ],
+
+    "languages": [
+      "javascript"
+    ],
+
+    "contact": {
+      "name": "Nick Estes",
+      "email": "njestes@usgs.gov"
+    },
+
+    "date": {
+      "metadataLastUpdated": "2018-04-19"
+    }
+  }
+]
